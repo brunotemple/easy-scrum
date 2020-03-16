@@ -17,9 +17,9 @@ type Props = {
 
 const BoardColumn: React.FC<Props> = props => {
     const classes = useStyles();
-    console.log(classes);
+
     return (
-        <Paper>
+        <Paper className={classes.container}>
             <Typography>{props.column.title}</Typography>
             <Droppable droppableId={props.column.id}>
                 {provided => (

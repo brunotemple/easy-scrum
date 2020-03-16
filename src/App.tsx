@@ -1,12 +1,14 @@
 import React from "react";
+import { ApolloProvider } from "@apollo/react-hooks";
 
+import { GraphQLClient } from "./api/graphQL-client";
 import Board from "./components/board/Board";
 
 function App() {
     return (
-        <div>
+        <ApolloProvider client={GraphQLClient}>
             <Board />
-        </div>
+        </ApolloProvider>
     );
 }
 
